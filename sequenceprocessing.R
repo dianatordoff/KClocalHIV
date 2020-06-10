@@ -28,11 +28,3 @@ write.fasta(KCtrimmedPRRT, names=names(KCtrimmedPRRT), file.out="PRRT.trimmed.KC
 
 #created alignment using MAFFT, see https://mafft.cbrc.jp/alignment/software/
 #note: alignment subsequently visually inspected for accuracy in Geneious, see https://www.geneious.com/ 
-
-#alternatively, use DECIPHER for multiple sequence alignment
-#see https://www.bioconductor.org/packages/release/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
-library(DECIPHER)
-dna <- readDNAStringSet("PRRT.trimmed.KC.fasta")
-alignment <- AlignSeqs(dna)
-writeXStringSet(alignment,"alignment.fasta")
-
