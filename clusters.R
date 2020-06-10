@@ -9,7 +9,7 @@ library(memisc)
 library(stringr)
 
 #alignment <- read.fasta("PRRT.trimmed.KC.aligned.fasta")
-dna <- read.dna("PRRT.trimmed.KC.aligned.fasta", format="fasta")
+dna <- read.dna("alignment.fasta", format="fasta")
 metadata <- read.csv("metadata.csv")
 
 
