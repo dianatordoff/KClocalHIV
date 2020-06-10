@@ -26,5 +26,9 @@ for (i in 1:length(seqPRRT)) {
 KCtrimmedPRRT  <- trimmedPRRT[c(which(names(trimmedPRRT) %in% metadata[metadata$KC==1,]$seqID))]
 write.fasta(KCtrimmedPRRT, names=names(KCtrimmedPRRT), file.out="PRRT.trimmed.KC.fasta")
 
-#created alignment using MAFFT, see https://mafft.cbrc.jp/alignment/software/
+#create alignment using MAFFT, download here https://mafft.cbrc.jp/alignment/software/
+system("mafft PRRT.trimmed.KC.fasta > alignment.fasta") #option uses FFT-NS-2
+
 #note: alignment subsequently visually inspected for accuracy in Geneious, see https://www.geneious.com/ 
+
+
