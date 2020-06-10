@@ -3,7 +3,7 @@ library(seqinr)
 
 #Load data
 fastafile <- read.fasta(file = "sequences.fasta")
-metadata <- readRDS(file = "metadata.rds")
+metadata <- read.csv("metadata.csv")
 
 #Keep PR/RT (protease/reverse transcriptase)
 seqPRRT  <- fastafile[c(which(names(fastafile) %in% metadata[metadata$type=="PR/RT",]$seqID))]
