@@ -10,7 +10,7 @@ library(stringr)
 
 #alignment <- read.fasta("PRRT.trimmed.KC.aligned.fasta")
 dna <- read.dna("PRRT.trimmed.KC.aligned.fasta", format="fasta")
-metadata <- readRDS(file = "metadata.rds")
+metadata <- read.csv("metadata.csv")
 
 
 #Use Tamura-Nei (TN93) pairwise distance, R function from "ape" package
